@@ -23,8 +23,8 @@ console.log(asia[2][1]);// output Kolkata
 
 let Bangladesh=["Dhaka","Bogra","Rangpur","Rajshahi","Chittagong"];
 
-let [,a,,,b]=Bangladesh;// Array de-structuring method
-console.log(b);// output Chittagong after de-structuring Array
+let [a,,,c,b]=Bangladesh;// Array de-structuring method
+console.log(a,b,c);// output Chittagong after de-structuring Array
 
 
 //array using in function
@@ -40,7 +40,7 @@ handleArray(array3);
 
 
 var array1=[1,2,3,4,56,78,90,34,56,32,45]
-//in filter method filter  take call back function as a parameter
+//in filter method filter take callback function as a parameter
 var result =array1.filter(function(item){
     return item>10
 });
@@ -66,7 +66,7 @@ console.log(arr)
 var numArray=[30,40,50,60,70,90]
 
 
-//this method find the number to follow the condition
+//this method finds the number to follow the condition
 var result=   numArray.find(function(item){
     return item>60
 
@@ -77,7 +77,7 @@ console.log(result) //end of the find   method
 
 //Start of the find index method
 var numArray=[30,40,50,60,70,90]
-//this method find index to follow the  condition
+//this method finds index to follow the condition
 var result=   numArray.findIndex(function(item){
     return item>60
 
@@ -108,7 +108,7 @@ console.log("New Program")
 
 
 //start of the include method
-// this method check if any is here in this array or not ang give boolean value
+// this method checks if any is here in this array or not ang gives boolean value
 var arr=[10,13,24,56,78,76,54,68]
 var re=arr.includes(5)
 console.log(re)
@@ -191,3 +191,5 @@ console.log(spliceArray)
 // after adding element
 spliceArray.splice(2,1,21)
 console.log(spliceArray)
+
+
