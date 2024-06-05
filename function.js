@@ -48,7 +48,16 @@ const user={
 }
 const Arrow=( anyobject,...x)=>{
    let  array=x;
-   console.log(`Username is ${user.username} and the product price is ${user.prices} and number is ${x}`)
+   
+   console.log(`Username is ${user.username} and the product price is ${user.prices} and number are [${x}]`)
 }// handle object in function and spread operator
 
-Arrow(user,1,24,56,5,35,7);
+Arrow(user,24,55,78,97);
+
+function user1(){
+    let user="Sourov";
+    let age = 25;
+    return [user,age]
+    
+}
+console.log(user1())

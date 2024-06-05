@@ -33,6 +33,7 @@ console.log(val);//output 300Saurov and also order are important. //that what he
 
 
 let al="Saurov"+100+200;
+
 console.log(al)//output Saurov100200
 
 let s;
