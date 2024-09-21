@@ -3,5 +3,5 @@ function person(name,age,profession){
   this.age=age;
   this.profession=profession;
 }
-const mybrother= new person("Saikat",33,"Student")
-console.log(mybrother)
+const myBrother= new person("Saikat",33,"Student")
+console.log(myBrother)

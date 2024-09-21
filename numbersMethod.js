@@ -1,6 +1,3 @@
-
-let number=12;
-let ToString=number.toString()// this method converted number to string
 console.log( typeof (43).toString())
 
 let a=4.6787;

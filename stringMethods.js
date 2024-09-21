@@ -1,48 +1,49 @@
 const s="Bangladesh";
+//length property returns the length of a string
+console.log(s.length);
 
-let slice=s.slice(6,s.length);// extract a parts of the string
-console.log(slice);
+//->*******************There are 4 methods for extracting string characters****************************  -->
+
+//charAt() method returns the character at a specified index (position) in a string
+let index=s.charAt(5);
+console.log(index);
 
 
-let substring=s.substring(0,6);//substring is similar to slice but it cannot except nagative indexs
-console.log(substring);
-let newS=s.replace("Bangladesh","Afghanisthan");// replace new text
-console.log(newS);
+// at() method same as charAt() just at() allows negative indexs
+let i =s.at(-2);
+console.log(i)
 
-let text1 = "   Hello";
+//charCodeAt() method returns the code of the character at a specified index in a string
+let indexCode=s.charCodeAt(5);
+console.log(indexCode)// returns character code 
+
+
+// --->********************There are 3 methods for extracting a part of a string*********************** <---
+let fruits="Banana,Mango,Lichi,Apple,Date,Orange"
+//slice() extracts a part of a string and returns the extracted part in a new string.  takes 2 parameters: start position, and end position (end not included)
+let cut=fruits.slice(7,-24);
+console.log(cut)
+
+//substring() is similar to slice() but can not accept negative index
+let str = "Apple, Banana, Kiwi";
+let part = str.substring(7, 13);
+console.log(part);
+
+//substr() is similar to slice().
+
+//The difference is that the second parameter specifies the length of the extracted part
+console.log(str.substr(0,5));
+
+
+// ************-->concat() joins two or more strings
+let text1 = "Hello";
 let text2 = "World";
-let text3 = text1.concat(" ", text2);//join two string
+let text3 = text1.concat(" ", text2);
+console.log(text3);
 
-let a="        Hello world       ";
-console.log(a.trim(''));// removes white spaces both sides
-console.log(a.trimStart());// rempves white spaces start of the sting
+// trim() method removes whitespace from both sides of a string
 
-let sentence="I am Al Shahoriar."
-console.log(sentence.charAt(0));// returns specific index of character
-console.log(sentence.charCodeAt(3))
+let Trim="    Hello   ";
+console.log(Trim.trim())
 
 
-
-console.log("Javascript String Seach below:");
-
-let str="I am Al Shahoriar.";
-
-console.log(str.indexOf("Al"));// IndexOf Method returns the index number position  of this char...
-
-console.log(str.lastIndexOf("Shahoriar")) // LastIndexOf Method returns if  the same word is in.
-// then returns  last words index number position  of char...
-
-//Both indexOf and lastIndexOf method returns -1
-// if the strings doesn't match .
-
-console.log(str.match(/Al/)) // if matches then return
-
-let Includes=str.includes("Saurov")// Returns true false if string is present or absent
-console.log(Includes);
-console.log(str.includes("Al"));
-
-let StartWith= str.startsWith("I");// this method returns true
-console.log(StartWith);//if the string begins with the values  otherwise false;
-
-let EndWith=str.endsWith("Shahoriar.")// this method returns true
-console.log(EndWith);//if the string ends with the  values  otherwise false;
