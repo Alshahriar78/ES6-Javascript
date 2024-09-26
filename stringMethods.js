@@ -45,5 +45,21 @@ console.log(text3);
 
 let Trim="    Hello   ";
 console.log(Trim.trim())
+console.log(Trim.trim().toUpperCase());
 
+
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools");
+console.log(text,newText)
+
+/*A string can be converted to an array with the split() method:*/
+let Name="al,shaoriar,rahman,Sourov,Hossain";
+let myName= Name.split(',');
+console.log(myName)
+
+/*All string methods return a new string. They don't modify the original string.
+
+Formally said:
+
+Strings are immutable: Strings cannot be changed, only replaced.*/
 
