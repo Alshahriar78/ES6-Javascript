@@ -8,4 +8,5 @@ console.log("The result is: " , x + y)
 let xl = 123e5;
 let xs = 123e-5;
 console.log(xl,xs);
+console.log((0.1*10+0.7*10)/10)
 

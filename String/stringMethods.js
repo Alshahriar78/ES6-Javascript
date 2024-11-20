@@ -18,24 +18,34 @@ let indexCode=s.charCodeAt(5);
 console.log(indexCode)// returns character code 
 
 
-// --->********************There are 3 methods for extracting a part of a string*********************** <---
+// --->********************There are 3 methods
+// for extracting a part of a string*********************** <---
 let fruits="Banana,Mango,Lichi,Apple,Date,Orange"
-//slice() extracts a part of a string and returns the extracted part in a new string.  takes 2 parameters: start position, and end position (end not included)
+//slice() extracts a part of a string and returns
+// the extracted part in a new string.
+// takes 2 parameters: start position, and end position (end not included)
+// Doesn't modify Original Array
 let cut=fruits.slice(7,-24);
-console.log(cut)
+console.log(cut,':',fruits)
+
 
 //substring() is similar to slice() but can not accept negative index
-let str = "Apple, Banana, Kiwi";
-let part = str.substring(7, 13);
+// Doesn't modify Original Array
+let str = "Apple,Banana, Kiwi";
+let part = str.substring(6, 13);
 console.log(part);
 
-//substr() is similar to slice().
 
-//The difference is that the second parameter specifies the length of the extracted part
+
+//substr() is similar to slice().
+//The difference is that the second parameter specifies
+// the length of the extracted part
+// Doesn't modify Original Array
 console.log(str.substr(0,5));
 
 
 // ************-->concat() joins two or more strings
+// Doesn't modify Original Array
 let text1 = "Hello";
 let text2 = "World";
 let text3 = text1.concat(" ", text2);
@@ -49,7 +59,7 @@ console.log(Trim.trim().toUpperCase());
 
 
 let text = "Please visit Microsoft!";
-let newText = text.replace("Microsoft", "W3Schools");
+let newText = text.replace("Microsoft", "To My House");
 console.log(text,newText)
 
 /*A string can be converted to an array with the split() method:*/

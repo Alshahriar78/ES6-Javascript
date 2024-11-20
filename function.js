@@ -2,7 +2,7 @@
 function simple(){
     let a=20;
     let b=32;
-    console.log(a+b);
+    return (a+b);
 }
 simple();//function execution and display output 52
 

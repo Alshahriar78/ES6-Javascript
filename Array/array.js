@@ -23,7 +23,7 @@ console.log(asia[2][1]);// output Kolkata
 
 let Bangladesh=["Dhaka","Bogra","Rangpur","Rajshahi","Chittagong"];
 
-let [a,,,c,b]=Bangladesh;// Array de-structuring method
+let [a,b,c]=Bangladesh;// Array de-structuring method
 console.log(a,b,c);// output Chittagong after de-structuring Array
 
 
@@ -42,7 +42,10 @@ handleArray(array3);
 var array1=[1,2,3,4,56,78,90,34,56,32,45]
 //in filter method filter take callback function as a parameter
 var result =array1.filter(function(item){
-    return item>10
+    if(item===56  ){
+        return item;
+    }
+    
 });
 console.log(result)
 //end of the filter method
@@ -68,13 +71,16 @@ var numArray=[30,40,50,60,70,90]
 
 
 //this method finds the number to follow the condition
-var result=   numArray.find(function(item){
-    return item>60
-
-});
+var result=   numArray.find(result=> result % 25===0);
 console.log(result) //end of the find   method
 
 
+
+for(var i=0; i<50; i++){
+    if(50 % i === 0){
+        console.log(i)
+    }
+}
 
 //Start of the find index method
 var numArray=[30,40,50,60,70,90]
@@ -96,11 +102,18 @@ console.log("FOr EAch ")
 //Start of the  for each method
 var numArray=[30,40,50,60,70,90]
 // this mehtod take back array elemet
+var s=0
 numArray.forEach(function(value, index, array){
-    console.log(value,index,array)// this return value index and array
-})//end of the  for each method
+    console.log(value,index,array)
+    // this return value index and array
+    s += value;
 
-
+})
+ console.log("Sum : ",s)
+ console.log("Max : ",Math.max(...numArray))
+ console.log("Min : ",Math.min(...numArray))
+ console.log("Avg : ",s/numArray.length)
+//end of the  for each method
 
 
 
@@ -111,13 +124,13 @@ console.log("New Program")
 //start of the include method
 // this method checks if any is here in this array or not ang gives boolean value
 var arr=[10,13,24,56,78,76,54,68]
-var re=arr.includes(5)
+var re=arr.includes(76)
 console.log(re)
 // end ofthe include method
 
 
 
-console.log("start of the index method")
+console.log("start of the index method");
 
 
 
@@ -166,13 +179,10 @@ console.log(newArray)
 
 
 // sort method arrange item in smmall to big
-console.log("start of the Sort method")
-
-let sortArray=[2,67,90,3,5,8]
-console.log(sortArray.sort());
 
 
-console.log("start of the Slice method")
+
+
 
 // slice method cutt of array accordint to index
 var cutSlice=[2,67,90,3,5,8]
@@ -199,7 +209,7 @@ let daysOfWeek = ['Saturday','Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursd
 
 //use for loop to accessing every data of javascript
 console.log("use for loop to accessing every data of javascript Array:")
-for(let i=0;i<=daysOfWeek.length;i++){
+for(let i=0;i<daysOfWeek.length;i++){
 
     console.log( `${daysOfWeek[i]}`);
 }
@@ -220,14 +230,19 @@ console.log(daysOfWeek.length);//length of the daysOfWeek array
 // //Adding element in array using push()method
 console.log("Adding element in array using push()method::")
 let numbersAdd = [0,1,2,3,4,5,6,7,8,9];
+console.log(numbersAdd.length)
 numbersAdd.push(10);
+console.log(numbersAdd.length)
 numbersAdd.push(12, 13);
+console.log(numbersAdd.length)
 console.log(numbersAdd)
+console.log(numbersAdd.length)
 
 //Adding element in the first position at array
 console.log("Adding element in the first position at array::")
-for (var i=numbersAdd.length; i>=0; i--){
+for (var i=numbersAdd.length; i>0; i--){
     numbersAdd[i] = numbersAdd[i-1];
+    console.log(numbersAdd[i])
 }
 numbersAdd[0] = 45;
 console.log(numbersAdd);

@@ -1,7 +1,7 @@
-let payment=true;
-let marks=90;
+const payment=true;
+const marks=90;
 
-function Enroll(){
+function enroll(){
     console.log(`Enrolling...`);
 
     const promises=new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@ function Enroll(){
     return promises;
 }
 
-function Progress(){
+function progress(){
     console.log(`progress...`);
     const promises=new Promise((resolve, reject) => {
         setTimeout(function(){
@@ -27,7 +27,7 @@ function Progress(){
             }
         },2000)
     })
-   return promises;
+    return promises;
 }
 function getCertificate(){
     console.log(`Preparing certificate.......`);
@@ -39,12 +39,16 @@ function getCertificate(){
     return promises;
 }
 
-enroll()
-.then(progress)
-.then(getCertificate)
-.then( (value) => {
-    console.log(value);
-})
-.catch((err) => {
-    console.log(err)
-})
+async function course(){
+  try {
+      await enroll();
+      await progress();
+      const msg=await getCertificate();
+      console.log(msg);
+  }catch (e) {
+      console.log(e);
+  }
+
+}
+
+course();
