@@ -72,4 +72,3 @@ console.log(myName)
 Formally said:
 
 Strings are immutable: Strings cannot be changed, only replaced.*/
-

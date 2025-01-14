@@ -4,15 +4,15 @@
 Object.defineProperty(object, property, descriptor) */
 
 const person = {
-    firstName: "John",
-    lastName : "Doe",
-    language : "EN",
+    firstName: "Al",
+    lastName : "Shahoriar",
+    language : "BN",
     get fullName() {
         return `${this.firstName}  ${ this.lastName}`;
     }
 };
 // Change a Property
-Object.defineProperty(person, "firstName", {value : "Al Shahoriar"});
+Object.defineProperty(person, "firstName", {value : "Sourov"});
 console.log(person.firstName);
 // Add a Property
 Object.defineProperty(person, "year", {value:"2008"},);

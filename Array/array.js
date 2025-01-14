@@ -32,8 +32,8 @@ console.log(a,b,c);// output Chittagong after de-structuring Array
 const array3=[200,499,900,457];
 
 function handleArray(getArray){
-    for(let item of getArray){
-        console.log(item);
+    for(let i=0;i<getArray.length;i++){
+        console.log(getArray[i]);
     }
 }
 handleArray(array3);
@@ -41,12 +41,7 @@ handleArray(array3);
 
 var array1=[1,2,3,4,56,78,90,34,56,32,45]
 //in filter method filter take callback function as a parameter
-var result =array1.filter(function(item){
-    if(item===56  ){
-        return item;
-    }
-    
-});
+var result =array1.filter(num=>num>57);
 console.log(result)
 //end of the filter method
 //end ofthe filter method
@@ -58,37 +53,25 @@ console.log("Hello Saurov");
 
 
 var a1="Al"
-var arr=Array.from(a1)
+var arr=Array.from(a1)// converted to Array from string
 console.log(arr)
-//end ofthe from method
-
+//end of the from method
+ 
 
 
 
 //Start of the find  method
+
 console.log("Start of the find  method");
-var numArray=[30,40,50,60,70,90]
-
-
-//this method finds the number to follow the condition
+var numArray=[30,40,25,50,60,70,90]
+// retrun first element in an array that satisfies a provided testing function.
 var result=   numArray.find(result=> result % 25===0);
 console.log(result) //end of the find   method
 
-
-
-for(var i=0; i<50; i++){
-    if(50 % i === 0){
-        console.log(i)
-    }
-}
-
 //Start of the find index method
 var numArray=[30,40,50,60,70,90]
-//this method finds index to follow the condition
-var result=   numArray.findIndex(function(item){
-    return item>60
-
-});
+//this method finds  the index of the first element in an array that satisfies a provided testing function
+var result=   numArray.findIndex(f=>f==50);
 console.log(result) //end of the find index method
 
 
@@ -104,9 +87,10 @@ var numArray=[30,40,50,60,70,90]
 // this mehtod take back array elemet
 var s=0
 numArray.forEach(function(value, index, array){
-    console.log(value,index,array)
+    console.log(value)
     // this return value index and array
     s += value;
+    
 
 })
  console.log("Sum : ",s)
@@ -364,5 +348,4 @@ function myFunction(total, value, index, array) {
     return total +value ;
 }
 console.log(sum);
-
 
