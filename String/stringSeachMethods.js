@@ -33,7 +33,7 @@ let text1 = "Hello world, welcome to the universe.";
 console.log(text1.startsWith("Hello"));
 
 let text2 = "The rain in Spain stays mainly in the plain";
-const myArr = text2.match(/spain/gi);
+const myArr = text2.match(/ain/gi);
 
 console.log(myArr);
 
@@ -44,5 +44,5 @@ let text3 = "Hello world, welcome to the universe.";
 console.log(text3.includes("world"));
 
 let text4 = "Hello world, welcome to the universe.";
-let st=text4.startsWith("Hello");
+let st=text4.startsWith("Hellos");
 console.log(st);
