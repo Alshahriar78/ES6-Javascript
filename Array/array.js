@@ -118,10 +118,10 @@ console.log("start of the index method");
 
 
 
-//start of the index method
+//start of the indexOf() method
 // this method check if any is here in this array  then give the index   value oterwise -1
-var saurov=arr.indexOf(76)
-console.log(saurov)
+var indexArray=arr.indexOf(76)
+console.log(indexArray)
 //end of the index method
 
 

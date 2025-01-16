@@ -4,14 +4,29 @@
 Object.defineProperty(object, property, descriptor) */
 
 const person = {
-    firstName: "Al",
-    lastName : "Shahoriar",
+    Name: {
+        firstName:"Al",
+        lastName : "Shahoriar"},
+    
     language : "BN",
+    Adress:{
+        District:"Bogra",
+        Thana:"Mokamtola",
+        Post:"Mokamtola"
+    },
     get fullName() {
-        return `${this.firstName}  ${ this.lastName}`;
+        return `${this.Name.firstName}  ${ this.Name.lastName}`;
     }
 };
+//property value Access rule
+// --->objectName.property
+console.log(person.Name.firstName + ' '+person.Name.lastName);
+
+
+
+
 // Change a Property
+//  used to define or modify a property directly on an object.
 Object.defineProperty(person, "firstName", {value : "Sourov"});
 console.log(person.firstName);
 // Add a Property
